@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "7671f1ed-7afa-4fd2-b4a4-5ef524a57b98",
+		"name": "social-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/api/friend",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n       \"friends\":\n         [\n           \"john@example7.com\",\n            \"andy@example.com\"\n          \n        ]\n }"
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/friend/connect",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"friend",
+						"connect"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/friend/list",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"andy@example.com\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/friend/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"friend",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/friend/common",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n       \"friends\":\n         [\n           \"andy@example.com'\",\n            \"andy@example5.com'\"\n        ]\n }"
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/friend/common",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"friend",
+						"common"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/friend/subsacribe",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"requestor\": \"lisa@example.com\",\n  \"target\": \"john@example.com\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/friend/subscribe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"friend",
+						"subscribe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/friend/block",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"requestor\": \"john@example.com\",\n  \"target\": \"kate@example.com\"\n}\n"
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/friend/block",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"friend",
+						"block"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/friend/subscribers",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"sender\":  \"john@example.com\",\n  \"text\": \"Hello World! kate@example.com\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/friend/subscribers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"friend",
+						"subscribers"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

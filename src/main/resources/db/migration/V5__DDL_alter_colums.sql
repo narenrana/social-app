@@ -1,0 +1,1 @@
+ALTER TABLE subscribe_friend_update ALTER COLUMN friend_email RENAME TO subscriber_email
