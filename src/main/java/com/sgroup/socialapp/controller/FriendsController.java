@@ -130,4 +130,11 @@ public class FriendsController {
 
     }
 
+    @PostMapping("*")
+    public String defaultMethod( @RequestBody RecepientsListRequest request) {
+
+        return  "{\"status\":\"no handler found\"}";
+
+    }
+
 }
